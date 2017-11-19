@@ -3,9 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
 
+  <button onclick="overview()"> Overview </button>
+  <button onclick="studentShow()"> Students </button>
+
+<!--overview --> 
+<section>
+
+<div id="containerOverview" class="noShow">
+	<!-- Enrollement --> 
+	<div id="enrollement">
+		<h3 class="titleBoxOverview">Enrrollement </h3>
+		<div id="totalStudents">
+			<p>Student that meet the target</p>
+		</div>
+		<div id="dropout">
+			<p>% of total</p>
+		</div>
+	</div>
+
+	<!-- NPS --> 
+
+	<div id="nps" class="noShow">
+		<h3>Net Promoter Score</h3>
+		<div id=acumulativeNPS></div>
+		<div id="percentPromoterDetractor"></div>
+	</div>	
+
+</div>
+</section>
+
+
+<!-- students -->
+<section>
+	<div id="container">
+  		<div id="photo"></div>
+  		<div id="name"></div>
+  		<div id="techPoints"></div>
+  		<div id="lifePoints"></div>
+ 	</div>
+</section>
+  
+	
+
+	
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
