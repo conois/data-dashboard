@@ -2,15 +2,21 @@
  * Estilos de tu proyecto
  */
 
-#enrollement{
-	outline: 2px solid black; 
-}
+
 .titleBoxOverview{
 
 }
 
 .noShow{
 	display: none;
+}
+
+#enrollement{
+	outline: 2px solid black; 
+}
+
+#nps{
+	outline: 2px solid black; 
 }
 /* estilos a traves de js */ 
 

@@ -52,6 +52,11 @@ console.log(data);
 
 
 		//NPS
+
+	//hacer visible la caja 
+	var npsBox=document.getElementById("nps"); 
+	npsBox.classList.remove("noShow"); 
+	npsBox.classList.add("show"); 
 	//Crear elementos
 	var acumulativeBox, acumulativePercent, promoters, detractors, passive,
 	acumulativeBox=document.createElement("div");
@@ -60,22 +65,60 @@ console.log(data);
 
 
 	//calcular el nps por sprint y sacar el promedio; 
-	acumuladoNPS=0
+	var acumuladoNPS=0;
+	var acumuladoPromoters=0;
+	var acumuladoPassive=0;
+	var acumuladoDetractors=0;
 	for (var i=0; i< data.AQP["2016-2"].ratings.length; i++){
-	var promoters, detractors, nps, npsPorSprint, 
+	var promoters, detractors, nps, acumuladoNPS, 
 	promoters=data.AQP["2016-2"].ratings[i].nps.promoters; 
+	acumuladoPromoters+= promoters;
 	detractors=data.AQP["2016-2"].ratings[i].nps.detractors;
+	acumuladoDetractors+= detractors; 
 	passive=data.AQP["2016-2"].ratings[i].nps.passive;
-	nps= promoters - detractors ; 
+	acumuladoPassive+=passive; 
 
-	npsPorSprint="En el sprint "
-
+	nps= promoters - detractors;
+	acumuladoNPS += nps; 
 	}
+	var promedioNPS = acumuladoNPS/data.AQP["2016-2"].ratings.length; 
+	var promedioPromoters= acumuladoPromoters/data.AQP["2016-2"].ratings.length; 
+	var promedioPassive= acumuladoPassive/data.AQP["2016-2"].ratings.length; 
+	var promedioDetractors= acumuladoDetractors/data.AQP["2016-2"].ratings.length; 
 
-	//mostrar el porcentaje promedio de promoters, passive y detractors y por sprint 
-		//Sprint 1 
+	//creando nodo de texto 
+	npsNode=document.createTextNode(promedioNPS); 
+	promotersDetractors.innerHTML= "% Promoters: " + promedioPromoters +  "<br> % Passive: " + promedioPassive + "<br> % Detractors: " + promedioDetractors; 
+	
+	//pasando hijos 
+
+	acumulativePercent.appendChild(npsNode);  
+
+	acumulativeBox.appendChild(acumulativePercent); 
+	acumulativeBox.appendChild(promotersDetractors); 
+
+	npsBox.appendChild(acumulativeBox);
+	containerOverview.appendChild(npsBox); 
 
 }
+
+	//Student Satisfaction 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
