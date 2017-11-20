@@ -103,7 +103,28 @@ console.log(data);
 }
 
 	//Student Satisfaction 
-	
+	//creando elementos 
+ 
+	var porcentajeSprintBox=document.getElementById("porcentajeSprintBox"); 
+	var parrafoParaPorcentaje=document.getElementById("porcentajePromedioSatisfaccion");
+
+	var acumuladorPorcentajes=0; 
+	for (var w=0 ; w< data.AQP["2016-2"].ratings.length; w++){
+		var cumple= data.AQP["2016-2"].ratings[w].student.cumple; 
+		var supera= data.AQP["2016-2"].ratings[w].student.supera; 
+		var sumaSatisfaccion= cumple + supera;
+
+		var porcentPorSprint=document.createElement("p");
+		var nodoPorcentajeSprint= document.createTextNode("% sprint " + [w+1] + ": " + sumaSatisfaccion); 
+		porcentPorSprint.appendChild(nodoPorcentajeSprint); 
+		porcentajeSprintBox.appendChild(porcentPorSprint); 
+
+
+		acumuladorPorcentajes+=sumaSatisfaccion; 
+	} 
+	parrafoParaPorcentaje.innerHTML=(acumuladorPorcentajes/data.AQP["2016-2"].ratings.length);
+
+
 
 
 
