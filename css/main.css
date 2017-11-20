@@ -18,24 +18,32 @@ body{
 /*seccion foto valentina*/
 #avatar{
 	background-color: #E1E1E1;
+	border: 2px solid;
+	border-color: #c4c4c4;
+	border-top-style: none;
 	width: 200px;
 	height: 700px;
 }
 
 #foto2{
 	width: 100px;
-	margin-top: 10px;
-	margin-left: 10px;
+	margin-top: 20px;
+	margin-left: 40px;
 	border-radius: 100px;
+	border: 3px solid;
+	border-color: #b2adad;
 }
 
 h3{
 	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #p{
 	margin-top: 20px;
 	margin-left: 10px;
+	padding: 10px;
 	
 }
 
@@ -51,25 +59,29 @@ h3{
 button{
 	position: relative;
 	left: 280px;
-	bottom: 610px;
+	bottom: 680px;
 	margin-right: 10px;
 	background-color: #fff;
+	font-size: 24px;
 	color: #000;
 	padding: 10px;
 	border-bottom-style: none;
+	border-top-style: none;
+	border-left-style: none;
 }
 
 button:hover{
 	background: #F99D24;
 	color: #fff;
+	border-radius: 7px;
 }
 
-/*posible opcion de seleccion de paises
+/*posible opcion de seleccion de paises*/
 #principal{
 	position: relative;
-	left:1050px;
-	bottom: 700px;
-	width: 170px;
+	left:1030px;
+	bottom: 720px;
+	width: 190px;
 	background-color: #F99D24;
 	border-radius: 5px;
 	padding: 10px;
@@ -87,11 +99,19 @@ li, ol{
 
 .nav li ul{
 	display: none;
+	padding: 10px;
 }
 
 .nav li:hover > ul{
 	display: block;
-}*/
+}
+
+.h:hover{
+	background-color: #fff;
+	border-radius: 6px;
+	color: #F99D24;
+	padding: 5px;
+}
 
 
 .titleBoxOverview{
@@ -105,21 +125,20 @@ li, ol{
 #enrollement{
 	color: #000; 
 	position: relative;
-	bottom: 600px;
-	left: 300px;
+	bottom: 900px;
+	left: 270px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
 	width: 400px;
 	padding: 20px;
-
 }
 
 #nps{
 	color: #000; 
 	position: relative;
-	bottom: 570px;
-	left: 300px;
+	bottom: 880px;
+	left: 270px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
@@ -128,8 +147,16 @@ li, ol{
 	
 }
 
-#studentSatisfaction{
-	outline: 2px solid black;
+#SatisfactionBox{
+	color: #000; 
+	position: relative;
+	bottom: 170px;
+	left: 270px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 400px;
+	padding: 20px;
 }
 /* estilos a traves de js */ 
 
