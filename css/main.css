@@ -58,7 +58,7 @@ h3{
 /*menu de opciones*/
 button{
 	position: relative;
-	left: 270px;
+	left: 230px;
 	bottom: 680px;
 	margin-right: 10px;
 	background-color: #fff;
@@ -126,7 +126,7 @@ li, ol{
 	color: #000; 
 	position: relative;
 	bottom: 700px;
-	left: 270px;
+	left: 230px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
@@ -161,7 +161,7 @@ li, ol{
 	color: #000;
 	position: relative;
 	bottom: 690px;
-	left: 270px;
+	left: 230px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
@@ -197,7 +197,7 @@ li, ol{
 	color: #000; 
 	position: relative;
 	bottom: 680px;
-	left: 270px;
+	left: 230px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
@@ -235,7 +235,7 @@ li, ol{
 	color: #000; 
 	position: relative;
 	bottom: 670px;
-	left: 270px;
+	left: 230px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
@@ -248,7 +248,7 @@ li, ol{
 	color: #000; 
 	position: relative;
 	bottom: 660px;
-	left: 270px;
+	left: 230px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
@@ -261,11 +261,37 @@ li, ol{
 	color: #000; 
 	position: relative;
 	bottom: 1996px;
-	left: 575px;
+	left: 535px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
-	width: 660px;
+	width: 680px;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+#techSkills{
+	color: #000; 
+	position: relative;
+	bottom: 1996px;
+	left: 535px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 680px;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+#hseSkills{
+	color: #000; 
+	position: relative;
+	bottom: 1996px;
+	left: 535px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 680px;
 	padding: 20px;
 }
 
