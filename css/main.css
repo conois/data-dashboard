@@ -1,6 +1,97 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*logo*/
+#foto{
+	position: relative;
+	width: 300px;
+	height: auto;
+	left: 500px;
+}
+
+/*seccion foto valentina*/
+#avatar{
+	background-color: #E1E1E1;
+	width: 200px;
+	height: 700px;
+}
+
+#foto2{
+	width: 100px;
+	margin-top: 10px;
+	margin-left: 10px;
+	border-radius: 100px;
+}
+
+h3{
+	padding: 10px;
+}
+
+#p{
+	margin-top: 20px;
+	margin-left: 10px;
+	
+}
+
+#p:hover{
+	width: 150px;
+	padding:10px;
+	border-radius: 5px;
+	background-color: #F99D24;
+	color: #fff;
+}
+
+/*menu de opciones*/
+button{
+	position: relative;
+	left: 280px;
+	bottom: 610px;
+	margin-right: 10px;
+	background-color: #fff;
+	color: #000;
+	padding: 10px;
+	border-bottom-style: none;
+}
+
+button:hover{
+	background: #F99D24;
+	color: #fff;
+}
+
+/*posible opcion de seleccion de paises*/
+#principal{
+	position: relative;
+	left:1050px;
+	bottom: 700px;
+	width: 170px;
+	background-color: #F99D24;
+	border-radius: 5px;
+	padding: 10px;
+	color: #fff;
+}
+
+li, ol{
+	list-style: none;
+}
+
+.nav li a{
+	text-decoration: none;
+	display: block;
+}
+
+.nav li ul{
+	display: none;
+}
+
+.nav li:hover > ul{
+	display: block;
+}
 
 
 .titleBoxOverview{
@@ -12,19 +103,48 @@
 }
 
 #enrollement{
-	outline: 2px solid black; 
+	color: #000; 
+	position: relative;
+	bottom: 600px;
+	left: 300px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 400px;
+	padding: 20px;
+
 }
 
 #nps{
-	outline: 2px solid black; 
+	color: #000; 
+	position: relative;
+	bottom: 570px;
+	left: 300px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 400px;
+	padding: 20px;
+	
 }
 /* estilos a traves de js */ 
 
 .studentBox{
-	outline: 2px solid black; 
+	position: relative;
+	width: 500px;
+	border: 2px solid;
+	border-radius: 5px;
+	border-color: #000;
+	background-color: #fff;
+	padding: 10px; 
+	left: 230px;
+	bottom: 600px;
+	float: left;
+	border: none;
 }
 .photoBox{
-	outline: 2px solid red; 
+	padding: 10px;
+	background-color: #fff;
 }
 .photoURL{
 	outline: 2px solid green;
@@ -32,25 +152,25 @@
 	width: 148px;
 }
 .paraphName{
-	outline: 2px solid black; 
+	outline: 2px solid yellow; 
 }
 .techBox{
 	outline: 2px solid black; 
 }
 .titleTechBox {
-	outline: 2px solid black; 
+	outline: 2px solid blue; 
 }
 .pointTech{
-	outline: 2px solid black; 
+	outline: 2px solid purple; 
 }
 .lifeBox{
-	outline: 2px solid black; 
+	outline: 2px solid pink; 
 }
 .titleLifeBox{
-	outline: 2px solid black; 
+	outline: 2px solid brown; 
 }
 .pointLife{
-	outline: 2px solid black; 
+	outline: 2px solid orange; 
 }
 .show{
 	display: block;

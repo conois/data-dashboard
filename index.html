@@ -6,14 +6,51 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<!-- Logo -->
+<header id="logo">
+	<img id="foto" src="assets/images/logo-laboratoria.svg" alt="Laboratoria">
+</header>
 
-  <button onclick="overview()"> Overview </button>
-  <button onclick="studentShow()"> Students </button>
+<!-- Linea de separacion -->
+<hr color="#E1E1E1">
 
+<!-- Seccion foto Valentina -->
+<div id="avatar">
+	<img id="foto2" src="assets/images/1511144385262981.PNG" alt="foto_valentina">
+	<p><h3>Hi!! <br>Valentina</h3></p>
+	<hr>
+	<p id="p">Add Student</p>
+	<p id="p">Remove Student</p>
+	<p id="p">Add Sprint</p>
+</div>
+
+	<!-- Menu de Opciones -->
+  <div id="btns">
+  	<button onclick="overview()"> Overview </button>
+  	<button onclick="studentShow()"> Students </button>
+  	<button>Teachers</button>
+  </div>
+
+	<!-- Posible opcion de seleccion de paises -->
+  <div id="menu">
+	<ul class="nav">
+		<li id="principal">Santiago de Chile <i class="fa fa-caret-down" aria-hidden="true"></i>
+		<ul>
+			<li>Lima</li>
+			<li>Ciudad de Mexico</li>
+			<li>Arequipa</li>
+		</ul>
+		</li>
+	</ul>
+</div>
+
+<div id="fondo"></div>
 <!--overview --> 
 <section>
 
 <div id="containerOverview" class="noShow">
+
 	<!-- Enrollement --> 
 	<div id="enrollement">
 		<h3 class="titleBoxOverview">Enrrollement </h3>
@@ -49,7 +86,7 @@
   
 	
 
-	
+		<script src="https://use.fontawesome.com/53a473cc15.js"></script>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
