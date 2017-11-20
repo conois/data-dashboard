@@ -54,11 +54,13 @@
 	<!-- Enrollement --> 
 	<div id="enrollement">
 		<h3 class="titleBoxOverview">Enrollement</h3>
-		<div id="totalStudents">
-			<p>Student that meet the target</p>
+		<div>
+			<p id="alumnasMatriculadas"></p>
+			<p>Alumnas matriculadas</p>
 		</div>
-		<div id="dropout">
-			<p>% of total</p>
+		<div>
+			<p id="porcentajeDeserciones"></p>
+			<p>% de deserciones</p>
 		</div>
 	</div>
 
@@ -66,8 +68,16 @@
 
 	<div id="nps">
 		<h3 class="titleBoxOverview">Net Promoter Score</h3>
-		<div id=acumulativeNPS></div>
-		<div id="percentPromoterDetractor"></div>
+		<div>
+			<p id="promedioNPS"></p>
+			<p>% promedio de NPS</p>
+		</div>
+		<div>
+			<p id="promedioPromoters"> % promoters</p>
+			<p id="promedioPassive">% Passive</p>
+			<p id="promedioDetractors"> % Detractors</p>
+		</div>
+		
 	</div>	
 
 	<!-- Student Satisfaction -->
@@ -76,13 +86,46 @@
 		<h3> Students Satisfaction</h3>
 		<div>
 			<p id="porcentajePromedioSatisfaccion"></p>
-			<p>% that meeting or exceeding expectation</p>
+			<p>% promedio que cumple o supera las expectativas</p>
 		</div>
 
 		<div id="porcentajeSprintBox">
 			<h4>% por sprint</h4>
 			
+		</div>
 
+	</div>
+
+	<!-- Teacher Ratings --> 
+
+	<div id="teacherBox">
+		<h3>Teacher Rating</h3>
+		<div>
+			<p id="notaProfe"></p>
+			<p>promedio notas profesores</p>
+		</div>
+	</div>
+
+	<!--JediMaster Rating --> 
+
+	<div>
+		<h3>JediMaster Rating</h3>
+		<div>
+			<p id="notaJedi"></p>
+			<p>promedio notas jedimaster</p>
+		</div>
+	</div>
+
+	<!--Achievement --> 
+	<div id="achievementBox">
+		<h3> Achievement</h3>
+		<div>
+			<p id="superanMeta"></p>
+			<p> Numero de alumnas activas que superan la meta</p>
+		</div>
+		<div>
+			<p id="metaRespectoTotal"></p>
+			<p>Porcentaje de alumnas que cumplen con la meta, en relacion al total </p>
 		</div>
 	</div>
 

@@ -14,17 +14,17 @@ console.log(data);
 		var contenedorStudents=document.getElementById("container"); 
 		contenedorStudents.classList.remove("show"); 
 		contenedorStudents.classList.add("noShow");
-		// Enrollment
-		var containerOverview, numberStudents, desertionPercent, containerBox, enrollmentBox, totalStudents, dropout, totalDeEstudiantes, contadorDeserciones, porcentajeDeserciones
+
+		// mostrar o no Overview 
+		var containerOverview, 
 		containerOverview=document.getElementById("containerOverview"); 
 		containerOverview.classList.remove("noShow"); 
 		containerOverview.classList.add("show");
-		numberStudents= document.createElement("p");
-		numberStudents.classList.add("numberOverview"); 
-		desertionPercent=document.createElement("p"); 
-		enrollmentBox=document.getElementById("enrollement"); 
-		totalStudents=document.getElementById("totalStudents"); 
-		dropout=document.getElementById("dropout"); 
+		
+
+		// Enrollement 
+		var alumnasMatriculadas=document.getElementById("alumnasMatriculadas"); 
+		var porcentajeDeserciones=document.getElementById("porcentajeDeserciones"); 
 		//numero de estudiantes
 		totalDeEstudiantes= data.AQP["2016-2"].students.length; 
 		//numero de deserciones
@@ -35,72 +35,54 @@ console.log(data);
 			}  
 		} 
 		//Porcentaje de deserciones respecto al total 
-		porcentajeDeserciones=((contadorDeserciones*100)/totalDeEstudiantes).toFixed(1);
+		deserciones=((contadorDeserciones*100)/totalDeEstudiantes).toFixed(1);
 		
-		//creando nodos de texto 
-		nodoPorcentaje=document.createTextNode(porcentajeDeserciones); 
-		nodoTotalEstudiantes=document.createTextNode(totalDeEstudiantes); 
-
-		//pasando hijos 
-		numberStudents.appendChild(nodoTotalEstudiantes); 
-		desertionPercent.appendChild(nodoPorcentaje); 
-
-		enrollmentBox.appendChild(numberStudents); 
-		enrollmentBox.appendChild(desertionPercent); 
-
-		containerOverview.appendChild(enrollmentBox);
-
-
+		alumnasMatriculadas.innerHTML=totalDeEstudiantes; 
+		porcentajeDeserciones.innerHTML=deserciones;
+		
+		
 		//NPS
 
-	//hacer visible la caja 
-	var npsBox=document.getElementById("nps"); 
-	npsBox.classList.remove("noShow"); 
-	npsBox.classList.add("show"); 
-	//Crear elementos
-	var acumulativeBox, acumulativePercent, promoters, detractors, passive,
-	acumulativeBox=document.createElement("div");
-	acumulativePercent=document.createElement("p"); 
-	promotersDetractors=document.createElement("p"); 
-
-
-	//calcular el nps por sprint y sacar el promedio; 
-	var acumuladoNPS=0;
-	var acumuladoPromoters=0;
-	var acumuladoPassive=0;
-	var acumuladoDetractors=0;
-	for (var j=0; j< data.AQP["2016-2"].ratings.length; j++){
-	var promoters, detractors, nps, acumuladoNPS, 
-	promoters=data.AQP["2016-2"].ratings[j].nps.promoters; 
-	acumuladoPromoters+= promoters;
-	detractors=data.AQP["2016-2"].ratings[j].nps.detractors;
-	acumuladoDetractors+= detractors; 
-	passive=data.AQP["2016-2"].ratings[j].nps.passive;
-	acumuladoPassive+=passive; 
-
-	nps= promoters - detractors;
-	acumuladoNPS += nps; 
-	}
-	var promedioNPS = acumuladoNPS/data.AQP["2016-2"].ratings.length; 
-	var promedioPromoters= acumuladoPromoters/data.AQP["2016-2"].ratings.length; 
-	var promedioPassive= acumuladoPassive/data.AQP["2016-2"].ratings.length; 
-	var promedioDetractors= acumuladoDetractors/data.AQP["2016-2"].ratings.length; 
-
-	//creando nodo de texto 
-	npsNode=document.createTextNode(promedioNPS); 
-	promotersDetractors.innerHTML= "% Promoters: " + promedioPromoters +  "<br> % Passive: " + promedioPassive + "<br> % Detractors: " + promedioDetractors; 
+	 var promedioNPS=document.getElementById("promedioNPS"); 
+	 var promedioPromoters=document.getElementById("promedioPromoters"); 
+	 var promedioPassive=document.getElementById("promedioPassive"); 
+	 var promedioDetractors=document.getElementById("promedioDetractors"); 
 	
-	//pasando hijos 
+	//promoters
+	var acumuladoPromoters=0;
+	 for(var j=0; j< data.AQP["2016-2"].ratings.length ; j++){
+	 	var promoters=data.AQP["2016-2"].ratings[j].nps.promoters; 
+	 	acumuladoPromoters+=promoters; 
+	 } porcentajePromoters= (acumuladoPromoters/data.AQP["2016-2"].ratings.length).toFixed(1); 
+	 promedioPromoters.innerHTML+=" " + porcentajePromoters; 
 
-	acumulativePercent.appendChild(npsNode);  
+	 //Passive
+	 var acumuladoPassive=0; 
+	 for( var k=0; k<data.AQP["2016-2"].ratings.length ; k++){
+	 	var passive= data.AQP["2016-2"].ratings[k].nps.passive; 
+	 	acumuladoPassive+=passive; 
+	 } porcentajePassive= (acumuladoPassive/data.AQP["2016-2"].ratings.length).toFixed(1);
+	promedioPassive.innerHTML+= " "+ porcentajePassive; 
 
-	acumulativeBox.appendChild(acumulativePercent); 
-	acumulativeBox.appendChild(promotersDetractors); 
+	//Detractors 
+	var acumuladoDetractors=0; 
+	 for( var l=0; l<data.AQP["2016-2"].ratings.length ; l++){
+	 	var detractors= data.AQP["2016-2"].ratings[l].nps.detractors; 
+	 	acumuladoDetractors+=detractors; 
+	 } porcentajeDetractors= (acumuladoDetractors/data.AQP["2016-2"].ratings.length).toFixed(1);
+	promedioDetractors.innerHTML+=" "+ porcentajeDetractors;
 
-	npsBox.appendChild(acumulativeBox);
-	containerOverview.appendChild(npsBox); 
 
-}
+	//calculando nps promedio
+	var acumuladorNPS=0; 
+	for ( var m=0 ; m< data.AQP["2016-2"].ratings.length ; m++){
+		var numeroPromoters=data.AQP["2016-2"].ratings[m].nps.promoters; 
+		var numeroDetractors= data.AQP["2016-2"].ratings[m].nps.detractors;
+		var nps= numeroPromoters - numeroDetractors ; 
+		acumuladorNPS+=nps; 
+	} var porcentajePromedioNPS= (acumuladorNPS/data.AQP["2016-2"].ratings.length).toFixed(1); 
+	promedioNPS.innerHTML= porcentajePromedioNPS;
+
 
 	//Student Satisfaction 
 	//creando elementos 
@@ -125,21 +107,70 @@ console.log(data);
 	parrafoParaPorcentaje.innerHTML=(acumuladorPorcentajes/data.AQP["2016-2"].ratings.length);
 
 
+	// Teacher Ratings 
+	var notaProfe= document.getElementById("notaProfe"); 
+
+	var sumaNotas=0; 
+	for (var v=0; v<data.AQP["2016-2"].ratings.length; v++){
+		var notaTeacher=data.AQP["2016-2"].ratings[v].teacher; 
+		sumaNotas+= notaTeacher; 
+	} 
+	notaProfe.innerHTML=(sumaNotas/data.AQP["2016-2"].ratings.length).toFixed(1); 
 
 
+	// Jedi master Ranting 
+
+	var notaJedi= document.getElementById("notaJedi"); 
+
+	var sumaRatingJedi=0;
+	for(var g=0; g<data.AQP["2016-2"].ratings.length; g++){
+		var puntajeJedi=data.AQP["2016-2"].ratings[g].jedi; 
+		sumaRatingJedi+= puntajeJedi; 
+	}
+	notaJedi.innerHTML=(sumaRatingJedi/data.AQP["2016-2"].ratings.length).toFixed(1); 
 
 
+	//achievement 
+
+	var superanMeta=document.getElementById("superanMeta"); 
+	var metaRespectoTotal=document.getElementById("metaRespectoTotal"); 
+
+	var acumuladorCumplenMeta=0; 
+	var alumnasActivas=0;
+	var puntosTech=0;
+	var puntosHSE=0;
+	//puntos tech y puntos hse 
+	for( var n=0 ; n<data.AQP["2016-2"].students.length; n++){
+		if (data.AQP["2016-2"].students[n].active == true){
+			console.log("alumna numero " + [n] + " activa ? = " + data.AQP["2016-2"].students[n].active)
+			alumnasActivas++;
+			console.log("numero de alumnas activas: "+ alumnasActivas); 
+			for (var m=0; m<data.AQP["2016-2"].students[n].sprints.length; m++){
+				puntosTech+=data.AQP["2016-2"].students[n].sprints[m].score.tech; 
+				puntosHSE+=data.AQP["2016-2"].students[n].sprints[m].score.hse; 
+				console.log("suma todos sus puntajes tecnicos: "+puntosTech); 
+				console.log("suma todos los puntajes hse: "+ puntosHSE); 
+			}
+		var promedioTech=puntosTech/data.AQP["2016-2"].students[n].sprints.length;
+		console.log("promedio puntaje tecnico: "+ promedioTech);  
+		var promedioHSE=puntosHSE/data.AQP["2016-2"].students[n].sprints.length; 
+		console.log("promedio puntaje hse: "+ promedioHSE); 
 
 
+		if( promedioTech >= 1260 && promedioHSE >= 840){
+			acumuladorCumplenMeta++;
+			console.log("numero de alumnas que cumplen con la meta: "+ acumuladorCumplenMeta); 
+			console.log("----------");  
+		}
+		}
+		puntosTech=0;
+		puntosHSE=0;
+ }
+	superanMeta.innerHTML=acumuladorCumplenMeta; 
+	metaRespectoTotal.innerHTML= ((acumuladorCumplenMeta*100)/alumnasActivas).toFixed(1);
 
 
-
-
-
-
-
-
-
+}
 
 
 // Creando funcionalidades para students
@@ -219,16 +250,13 @@ console.log(data);
 	studentBox.appendChild(lifeBox);  
 
 	container.appendChild(studentBox);
-
 }
+}
+
 
 	
 
 
-
-
-
-}
 	 
 
 // crenado funcionalidades para teachers 
