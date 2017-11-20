@@ -58,7 +58,7 @@ h3{
 /*menu de opciones*/
 button{
 	position: relative;
-	left: 280px;
+	left: 270px;
 	bottom: 680px;
 	margin-right: 10px;
 	background-color: #fff;
@@ -125,39 +125,151 @@ li, ol{
 #enrollement{
 	color: #000; 
 	position: relative;
-	bottom: 900px;
+	bottom: 700px;
 	left: 270px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
-	width: 400px;
+	width: 250px;
+	height: 200px;
 	padding: 20px;
+	text-align: center;
 }
 
-#nps{
-	color: #000; 
+#alumnasM{
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+}
+
+#porcentajeD{
 	position: relative;
-	bottom: 880px;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+	left: 130px;
+	bottom: 85px;
+}
+
+#nps{ 
+	color: #000;
+	position: relative;
+	bottom: 690px;
 	left: 270px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
-	width: 400px;
+	width: 250px;
 	padding: 20px;
-	
+	text-align: center;
+}
+
+#pNps{
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+	left: 60px;
+}
+
+#pNps2{
+	position: relative;
+	bottom: -10px;
+	left: 25px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 150px;
+	padding: 20px;
+	text-align: center;
 }
 
 #SatisfactionBox{
 	color: #000; 
 	position: relative;
-	bottom: 170px;
+	bottom: 680px;
 	left: 270px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
-	width: 400px;
+	width: 250px;
+	padding: 20px;
+	text-align: center;
+}
+
+#pps{
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 150px;
+	height: 90px;
+	text-align: center;
+	left: 40px;
+}
+
+#porcentajeSprintBox{
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 20px;
+	margin-top: 10px;
+	width: 150px;
+	height: 90px;
+	text-align: center;
+	left: 30px;
+}
+
+#teacherBox{
+	color: #000; 
+	position: relative;
+	bottom: 670px;
+	left: 270px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 250px;
+	padding: 20px;
+	text-align: center;
+}
+
+#jediBox{
+	color: #000; 
+	position: relative;
+	bottom: 660px;
+	left: 270px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 250px;
+	padding: 20px;
+	text-align: center;
+}
+
+#achievementBox{
+	color: #000; 
+	position: relative;
+	bottom: 1996px;
+	left: 575px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 660px;
 	padding: 20px;
 }
+
+
 /* estilos a traves de js */ 
 
 .studentBox{
