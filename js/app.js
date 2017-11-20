@@ -30,8 +30,9 @@ console.log(data);
 		for (var i=0; i< data.AQP["2016-2"].students.length; i++){
 			if (data.AQP["2016-2"].students[i].active == false){
 				contadorDeserciones++; 
+
 			}  
-		} 
+		}
 		//Porcentaje de deserciones respecto al total 
 		deserciones=((contadorDeserciones*100)/totalDeEstudiantes).toFixed(1);
 		
@@ -140,25 +141,17 @@ console.log(data);
 	//puntos tech y puntos hse 
 	for( var n=0 ; n<data.AQP["2016-2"].students.length; n++){
 		if (data.AQP["2016-2"].students[n].active == true){
-			console.log("alumna numero " + [n] + " activa ? = " + data.AQP["2016-2"].students[n].active)
 			alumnasActivas++;
-			console.log("numero de alumnas activas: "+ alumnasActivas); 
 			for (var m=0; m<data.AQP["2016-2"].students[n].sprints.length; m++){
 				puntosTech+=data.AQP["2016-2"].students[n].sprints[m].score.tech; 
 				puntosHSE+=data.AQP["2016-2"].students[n].sprints[m].score.hse; 
-				console.log("suma todos sus puntajes tecnicos: "+puntosTech); 
-				console.log("suma todos los puntajes hse: "+ puntosHSE); 
 			}
 		var promedioTech=puntosTech/data.AQP["2016-2"].students[n].sprints.length;
-		console.log("promedio puntaje tecnico: "+ promedioTech);  
 		var promedioHSE=puntosHSE/data.AQP["2016-2"].students[n].sprints.length; 
-		console.log("promedio puntaje hse: "+ promedioHSE); 
 
 
 		if( promedioTech >= 1260 && promedioHSE >= 840){
 			acumuladorCumplenMeta++;
-			console.log("numero de alumnas que cumplen con la meta: "+ acumuladorCumplenMeta); 
-			console.log("----------");  
 		}
 		}
 		puntosTech=0;
@@ -167,10 +160,129 @@ console.log(data);
 	superanMeta.innerHTML=acumuladorCumplenMeta; 
 	metaRespectoTotal.innerHTML= ((acumuladorCumplenMeta*100)/alumnasActivas).toFixed(1);
 
+	//Tech Skills 
+	//Numero de alumnas que superan el puntaje tecnico 
+	var numeroSuperanTecnico = document.getElementById("numeroSuperanTecnico"); 
+	var porcentajeSuperanTecnico= document.getElementById("porcentajeSuperanTecnico"); 
+
+	var sumaPuntajeTecnico=0;
+	var alumnasSuperanTecnico=0;
+	for(var r=0; r< data.AQP["2016-2"].students.length; r++){
+		for ( var s=0; s< data.AQP["2016-2"].students[r].sprints.length; s++){
+			sumaPuntajeTecnico+= data.AQP["2016-2"].students[r].sprints[s].score.tech; 
+		}promedioPuntajeTecnico=sumaPuntajeTecnico/data.AQP["2016-2"].students[r].sprints.length;
+		if (promedioPuntajeTecnico>=1260){
+			alumnasSuperanTecnico++;
+		} sumaPuntajeTecnico=0;
+	} 
+	numeroSuperanTecnico.innerHTML=alumnasSuperanTecnico;
+	porcentajeSuperanTecnico.innerHTML= ((alumnasSuperanTecnico*100)/data.AQP["2016-2"].students.length).toFixed(1) + "%";
+
+	//rendimiento por sprint TECH
+
+	//sprint 1 
+	var superanSprintUno=document.getElementById("superanSprintUno"); 
+
+	var superanTecnicoSprintUno=0;
+	for ( var a=0; a<data.AQP["2016-2"].students.length; a++){
+		if(data.AQP["2016-2"].students[a].sprints[0].score.tech >1260){
+			superanTecnicoSprintUno++;
+		}	
+		
+	}var promedioSuperanSprintUno=((superanTecnicoSprintUno*100)/data.AQP["2016-2"].students.length).toFixed(1); 
+	superanSprintUno.innerHTML+= superanTecnicoSprintUno +"# alumnas superaron la meta// " + promedioSuperanSprintUno + "% del total"
+
+	//sprint 2
+	var superanSprintDos=document.getElementById("superanSprintDos"); 
+
+	var superanTecnicoSprintDos=0;
+	for ( var b=0; b<data.AQP["2016-2"].students.length; b++){
+		if(data.AQP["2016-2"].students[b].sprints[1].score.tech >1260){
+			superanTecnicoSprintDos++;
+		}	
+		
+	}var promedioSuperanSprintDos=((superanTecnicoSprintDos*100)/data.AQP["2016-2"].students.length).toFixed(1); 
+	superanSprintDos.innerHTML+= superanTecnicoSprintDos +"#  alumnas superaron la meta // " + promedioSuperanSprintDos + "% del total"
+
+	//sprint 3 
+
+	 var superanSprintTres=document.getElementById("superanSprintTres"); 
+
+	var superanTecnicoSprintTres=0;
+	for ( var c=0; c<data.AQP["2016-2"].students.length; c++){
+		if(data.AQP["2016-2"].students[c].sprints[2].score.tech >1260){
+			superanTecnicoSprintTres++;
+		}	
+		
+	}var promedioSuperanSprintTres=((superanTecnicoSprintTres*100)/data.AQP["2016-2"].students.length).toFixed(1); 
+	superanSprintTres.innerHTML+= superanTecnicoSprintTres +"#  alumnas superaron la meta // " + promedioSuperanSprintTres + "% del total"
+
+	//sprint 4 
+	var superanSprintCuatro=document.getElementById("superanSprintCuatro"); 
+
+	var superanTecnicoSprintCuatro=0;
+	for ( var d=0; d<data.AQP["2016-2"].students.length; d++){
+		if(data.AQP["2016-2"].students[d].sprints[3].score.tech >1260){
+			superanTecnicoSprintCuatro++;
+		}	
+		
+	}var promedioSuperanSprintCuatro=((superanTecnicoSprintCuatro*100)/data.AQP["2016-2"].students.length).toFixed(1); 
+	superanSprintCuatro.innerHTML+= superanTecnicoSprintCuatro +"#  alumnas superaron la meta // " + promedioSuperanSprintCuatro + "% del total"
+
+	// rendimiento por sprint HSE 
+
+	var superanSprintUnoHSE=document.getElementById("superanSprintUnoHSE"); 
+
+	var superanHSESprintUno=0;
+	for ( var a=0; a<data.AQP["2016-2"].students.length; a++){
+		if(data.AQP["2016-2"].students[a].sprints[0].score.hse >840){
+			superanHSESprintUno++;
+		}	
+		
+	}var promedioSuperanSprintUnoHSE=((superanHSESprintUno*100)/data.AQP["2016-2"].students.length).toFixed(1); 
+	superanSprintUnoHSE.innerHTML+= superanHSESprintUno +"# alumnas superaron la meta// " + promedioSuperanSprintUnoHSE + "% del total"
+
+	//sprint 2
+	var superanSprintDosHSE=document.getElementById("superanSprintDosHSE"); 
+
+	var superanHSESprintDos=0;
+	for ( var b=0; b<data.AQP["2016-2"].students.length; b++){
+		if(data.AQP["2016-2"].students[b].sprints[1].score.hse >840){
+			superanHSESprintDos++;
+		}	
+		
+	}var promedioSuperanSprintDosHSE=((superanHSESprintDos*100)/data.AQP["2016-2"].students.length).toFixed(1); 
+	superanSprintDosHSE.innerHTML+= superanHSESprintDos +"#  alumnas superaron la meta // " + promedioSuperanSprintDosHSE + "% del total"
+
+	//sprint 3 
+
+	 var superanSprintTresHSE=document.getElementById("superanSprintTresHSE"); 
+
+	var superanHSESprintTres=0;
+	for ( var c=0; c<data.AQP["2016-2"].students.length; c++){
+		if(data.AQP["2016-2"].students[c].sprints[2].score.hse >840){
+			superanHSESprintTres++;
+		}	
+		
+	}var promedioSuperanSprintTresHSE=((superanHSESprintTres*100)/data.AQP["2016-2"].students.length).toFixed(1); 
+	superanSprintTresHSE.innerHTML+= superanHSESprintTres +"#  alumnas superaron la meta // " + promedioSuperanSprintTresHSE + "% del total"
+
+	//sprint 4 
+	var superanSprintCuatroHSE=document.getElementById("superanSprintCuatroHSE"); 
+
+	var superanHSESprintCuatro=0;
+	for ( var d=0; d<data.AQP["2016-2"].students.length; d++){
+		if(data.AQP["2016-2"].students[d].sprints[3].score.hse >840){
+			superanHSESprintCuatro++;
+		}	
+		
+	}var promedioSuperanSprintCuatroHSE=((superanHSESprintCuatro*100)/data.AQP["2016-2"].students.length).toFixed(1); 
+	superanSprintCuatroHSE.innerHTML+= superanHSESprintCuatro +"#  alumnas superaron la meta // " + promedioSuperanSprintCuatroHSE + "% del total"
+
+
+
 
 }
-
-
 // Creando funcionalidades para students
 	//crear elementos cajas y mas 
 
