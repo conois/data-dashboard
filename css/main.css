@@ -127,6 +127,10 @@ li, ol{
 	padding: 20px;
 	
 }
+
+#studentSatisfaction{
+	outline: 2px solid black;
+}
 /* estilos a traves de js */ 
 
 .studentBox{

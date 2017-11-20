@@ -69,13 +69,13 @@ console.log(data);
 	var acumuladoPromoters=0;
 	var acumuladoPassive=0;
 	var acumuladoDetractors=0;
-	for (var i=0; i< data.AQP["2016-2"].ratings.length; i++){
+	for (var j=0; j< data.AQP["2016-2"].ratings.length; j++){
 	var promoters, detractors, nps, acumuladoNPS, 
-	promoters=data.AQP["2016-2"].ratings[i].nps.promoters; 
+	promoters=data.AQP["2016-2"].ratings[j].nps.promoters; 
 	acumuladoPromoters+= promoters;
-	detractors=data.AQP["2016-2"].ratings[i].nps.detractors;
+	detractors=data.AQP["2016-2"].ratings[j].nps.detractors;
 	acumuladoDetractors+= detractors; 
-	passive=data.AQP["2016-2"].ratings[i].nps.passive;
+	passive=data.AQP["2016-2"].ratings[j].nps.passive;
 	acumuladoPassive+=passive; 
 
 	nps= promoters - detractors;
@@ -104,7 +104,6 @@ console.log(data);
 
 	//Student Satisfaction 
 	
-
 
 
 
