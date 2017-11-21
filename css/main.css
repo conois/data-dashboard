@@ -15,11 +15,18 @@ body{
 	left: 500px;
 }
 
+#searchBar{
+	position: relative;
+	bottom: 680px;
+	left: 300px;
+	
+}
+
 /*seccion foto valentina*/
 #avatar{
-	background-color: #E1E1E1;
-	border: 2px solid;
-	border-color: #c4c4c4;
+	background-color: #f4f5f7;
+	border: 3px solid;
+	border-color: #E1E1E1;
 	border-top-style: none;
 	width: 200px;
 	height: 700px;
@@ -31,7 +38,7 @@ body{
 	margin-left: 40px;
 	border-radius: 100px;
 	border: 3px solid;
-	border-color: #b2adad;
+	border-color: #E1E1E1;
 }
 
 h3{
@@ -58,7 +65,7 @@ h3{
 /*menu de opciones*/
 button{
 	position: relative;
-	left: 230px;
+	left: 225px;
 	bottom: 680px;
 	margin-right: 10px;
 	background-color: #fff;
@@ -123,6 +130,7 @@ li, ol{
 }
 
 #enrollement{
+	background-color: #f4f5f7;
 	color: #000; 
 	position: relative;
 	bottom: 700px;
@@ -137,6 +145,7 @@ li, ol{
 }
 
 #alumnasM{
+	background-color: #fff;
 	border:3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
@@ -146,6 +155,7 @@ li, ol{
 }
 
 #porcentajeD{
+	background-color: #fff;
 	position: relative;
 	border:3px solid;
 	border-color: #E1E1E1;
@@ -158,6 +168,7 @@ li, ol{
 }
 
 #nps{ 
+	background-color: #f4f5f7;
 	color: #000;
 	position: relative;
 	bottom: 690px;
@@ -171,6 +182,7 @@ li, ol{
 }
 
 #pNps{
+	background-color: #fff;
 	position: relative;
 	border:3px solid;
 	border-color: #E1E1E1;
@@ -182,6 +194,7 @@ li, ol{
 }
 
 #pNps2{
+	background-color: #fff;
 	position: relative;
 	bottom: -10px;
 	left: 25px;
@@ -191,9 +204,11 @@ li, ol{
 	width: 150px;
 	padding: 20px;
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 #SatisfactionBox{
+	background-color: #f4f5f7;
 	color: #000; 
 	position: relative;
 	bottom: 680px;
@@ -207,6 +222,7 @@ li, ol{
 }
 
 #pps{
+	background-color: #fff;
 	position: relative;
 	border:3px solid;
 	border-color: #E1E1E1;
@@ -219,6 +235,7 @@ li, ol{
 }
 
 #porcentajeSprintBox{
+	background-color: #fff;
 	position: relative;
 	border:3px solid;
 	border-color: #E1E1E1;
@@ -229,9 +246,11 @@ li, ol{
 	height: 90px;
 	text-align: center;
 	left: 30px;
+	margin-bottom: 20px;
 }
 
 #teacherBox{
+	background-color: #f4f5f7;
 	color: #000; 
 	position: relative;
 	bottom: 670px;
@@ -244,7 +263,22 @@ li, ol{
 	text-align: center;
 }
 
+#profe{
+	background-color: #fff;
+	position: relative;
+	bottom: -10px;
+	left: 25px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 150px;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
 #jediBox{
+	background-color: #f4f5f7;
 	color: #000; 
 	position: relative;
 	bottom: 660px;
@@ -257,10 +291,25 @@ li, ol{
 	text-align: center;
 }
 
+#jedi{
+	background-color: #fff;
+	position: relative;
+	bottom: -10px;
+	left: 25px;
+	border: 3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	width: 150px;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
 #achievementBox{
+	background-color: #f4f5f7;
 	color: #000; 
 	position: relative;
-	bottom: 1996px;
+	bottom: 2210px;
 	left: 535px;
 	border: 3px solid;
 	border-color: #E1E1E1;
@@ -268,12 +317,39 @@ li, ol{
 	width: 680px;
 	padding: 20px;
 	margin-bottom: 10px;
+	text-align: center;
+}
+
+#superanM{
+	background-color: #fff;
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 500px;
+	text-align: center;
+	left: 60px;
+	margin-bottom: 10px;
+}
+
+#resto{
+	background-color: #fff;
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 500px;
+	text-align: center;
+	left: 60px;
 }
 
 #techSkills{
+	background-color: #f4f5f7;
 	color: #000; 
 	position: relative;
-	bottom: 1996px;
+	bottom: 2210px;
 	left: 535px;
 	border: 3px solid;
 	border-color: #E1E1E1;
@@ -281,18 +357,97 @@ li, ol{
 	width: 680px;
 	padding: 20px;
 	margin-bottom: 10px;
+	text-align: center;
+}
+
+#skillsTech{
+	background-color: #fff;
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 500px;
+	text-align: center;
+	left: 60px;
+	margin-bottom: 10px;
+}
+
+#skillsTech2{
+	background-color: #fff;
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 500px;
+	text-align: center;
+	left: 60px;
+	margin-bottom: 10px;
+}
+
+#skillsTech3{
+	background-color: #fff;
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 500px;
+	text-align: center;
+	left: 60px;
 }
 
 #hseSkills{
+	background-color: #f4f5f7;
 	color: #000; 
 	position: relative;
-	bottom: 1996px;
+	bottom: 2210px;
 	left: 535px;
 	border: 3px solid;
 	border-color: #E1E1E1;
 	border-radius: 5px;
 	width: 680px;
 	padding: 20px;
+	text-align: center;
+}
+
+#hse1{
+	background-color: #fff;
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 500px;
+	text-align: center;
+	left: 60px;
+	margin-bottom: 10px;
+}
+
+#hse2{
+	background-color: #fff;
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 500px;
+	text-align: center;
+	left: 60px;
+	margin-bottom: 10px;
+}
+
+#hse3{
+	background-color: #fff;
+	position: relative;
+	border:3px solid;
+	border-color: #E1E1E1;
+	border-radius: 5px;
+	padding: 10px;
+	width: 500px;
+	text-align: center;
+	left: 60px;
 }
 
 
@@ -348,3 +503,4 @@ li, ol{
 .show{
 	display: block;
 }
+

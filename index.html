@@ -1,199 +1,202 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel=“shortcut icon” type=“image/x-icon” href= “favicon.ico”>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-  </head>
-  <body>
+<head>
+	<meta charset="utf-8">
+	<title>Data Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<!-- Logo -->
-<header id="logo">
-	<img id="foto" src="assets/images/logo-laboratoria.svg" alt="Laboratoria">
-</header>
+	<!-- Logo -->
+	<header id="logo">
+		<img id="foto" src="assets/images/logo-laboratoria.svg" alt="Laboratoria">
+	</header>
 
-<!-- Linea de separacion -->
-<hr color="#E1E1E1">
+	<!-- Linea de separacion -->
+	<hr color="#E1E1E1">
 
-<!-- Seccion foto Valentina -->
-<div id="avatar">
-	<img id="foto2" src="assets/images/1511144385262981.PNG" alt="foto_valentina">
-	<p><h3>Hi!! <br>Valentina</h3></p>
-	<hr color="#b2adad">
-	<p id="p">Add Student</p>
-	<p id="p">Remove Student</p>
-	<p id="p">Add Sprint</p>
-</div>
+	<!-- Seccion foto Valentina -->
+	<div id="avatar">
+		<img id="foto2" src="assets/images/1511144385262981.PNG" alt="foto_valentina">
+		<p><h3>Hi!! <br>Valentina</h3></p>
+		<hr color="#E1E1E1">
+		<p id="p">Add Student</p>
+		<p id="p">Remove Student</p>
+		<p id="p">Add Sprint</p>
+	</div>
 
 	<!-- Menu de Opciones -->
-  <div id="btns">
-  	<button onclick="overview()"> Overview </button>
-  	<button onclick="studentShow()"> Students </button>
-  	<button>Teachers</button>
-  </div>
+	<div id="btns">
+		<button onclick="overview()"> Overview </button>
+		<button onclick="studentShow()"> Students </button>
+		<button>Teachers</button>
+		<input type="text" id="searchBar" placeholder="Search">
+	</div>
+
 
 	<!-- Opcion para seleccionar paises -->
 	<div id="menu">
-	<ul class="nav">
-		<li id="principal">Santiago de Chile <i class="fa fa-caret-down" aria-hidden="true"></i>
-		<ul>
-			<li class="h"><i class="fa fa-angle-right" aria-hidden="true"></i> Lima</li>
-			<li class="h"><i class="fa fa-angle-right" aria-hidden="true"></i> Ciudad de Mexico</li>
-			<li class="h"><i class="fa fa-angle-right" aria-hidden="true"></i> Arequipa</li>
+		<ul class="nav">
+			<li id="principal">Santiago de Chile <i class="fa fa-caret-down" aria-hidden="true"></i>
+				<ul>
+					<li class="h"><i class="fa fa-angle-right" aria-hidden="true"></i> Lima</li>
+					<li class="h"><i class="fa fa-angle-right" aria-hidden="true"></i> Ciudad de Mexico</li>
+					<li class="h"><i class="fa fa-angle-right" aria-hidden="true"></i> Arequipa</li>
+				</ul>
+			</li>
 		</ul>
-		</li>
-	</ul>
-</div>
-
-<div id="fondo"></div>
-<!--overview --> 
-<section>
-
-<div id="containerOverview" class="noShow">
-
-	<!-- Enrollement --> 
-	<div id="enrollement">
-		<h3 class="titleBoxOverview">Enrollement</h3>
-		<div id="alumnasM">
-			<p id="alumnasMatriculadas"></p>
-			<p>Alumnas matriculadas</p>
-		</div>
-		<div id="porcentajeD">
-			<p id="porcentajeDeserciones"></p>
-			<p>% de deserciones</p>
-		</div>
 	</div>
 
-	<!-- NPS --> 
+	<div id="fondo"></div>
 
-	<div id="nps">
-		<h3 class="titleBoxOverview">Net Promoter Score</h3>
-		<div id="pNps">
-			<p id="promedioNPS"></p>
-			<p>% promedio de NPS</p>
-		</div>
-		<div id="pNps2">
-			<p id="promedioPromoters"> % promoters</p>
-			<p id="promedioPassive">% Passive</p>
-			<p id="promedioDetractors"> % Detractors</p>
-		</div>
+	<!--overview --> 
+	<section>
+		<div id="containerOverview" class="noShow">
+
+			<!-- Enrollement --> 
+			<div id="enrollement">
+				<h3 class="titleBoxOverview">Enrollement</h3>
+				<div id="alumnasM">
+					<p id="alumnasMatriculadas"></p>
+					<p>Alumnas matriculadas</p>
+				</div>
+				<div id="porcentajeD">
+					<p id="porcentajeDeserciones"></p>
+					<p>% de deserciones</p>
+				</div>
+			</div>
+
+			<!-- NPS --> 
+
+			<div id="nps">
+				<h3 class="titleBoxOverview">Net Promoter Score</h3>
+				<div id="pNps">
+					<p id="promedioNPS"></p>
+					<p>% promedio de NPS</p>
+				</div>
+				<div id="pNps2">
+					<p id="promedioPromoters"> % promoters</p>
+					<p id="promedioPassive">% Passive</p>
+					<p id="promedioDetractors"> % Detractors</p>
+				</div>
+
+			</div>	
+
+			<!-- Student Satisfaction -->
+
+			<div id="SatisfactionBox">
+				<h3> Students Satisfaction</h3>
+				<div id="pps">
+					<p id="porcentajePromedioSatisfaccion"></p>
+					<p>% promedio que cumple o supera las expectativas</p>
+				</div>
+
+				<div id="porcentajeSprintBox">
+					<h4>% por sprint</h4>
+
+				</div>
+
+			</div>
+
+			<!-- Teacher Ratings --> 
+
+			<div id="teacherBox">
+				<h3>Teacher Rating</h3>
+				<div id="profe">
+					<p id="notaProfe"></p>
+					<p>promedio notas profesores</p>
+				</div>
+			</div>
+
+			<!--JediMaster Rating --> 
+
+			<div id="jediBox">
+				<h3>JediMaster Rating</h3>
+				<div id="jedi">
+					<p id="notaJedi"></p>
+					<p>promedio notas jedimaster</p>
+				</div>
+			</div>
+
+			<!--Achievement --> 
+			<div id="achievementBox">
+				<h3> Achievement</h3>
+				<div id="superanM">
+					<p id="superanMeta"></p>
+					<p> Numero de alumnas activas que superan la meta</p>
+				</div>
+				<div id ="resto">
+					<p id="metaRespectoTotal"></p>
+					<p>Porcentaje de alumnas que cumplen con la meta, en relacion al total </p>
+				</div>
+			</div>
+
+			<!-- tech skills --> 
+
+			<div id="techSkills">
+				<h3>Tech Skills</h3>
+				<div id="skillsTech">
+					<p id="numeroSuperanTecnico"></p>
+					<p># de alumnas que superan la meta de puntaje tecnico</p>
+				</div>
+
+				<div id="skillsTech2">
+					<p id="porcentajeSuperanTecnico"></p>
+					<p> Porcentaje de alumnas que superan el puntaje tecnico respecto al total de alumnas </p>
+				</div>
+
+				<div id="skillsTech3">
+					<p id="superanSprintUno">Sprint 1 : </p>
+					<p id="superanSprintDos">Sprint 2 : </p>
+					<p id="superanSprintTres">Sprint 3 : </p>
+					<p id="superanSprintCuatro">Sprint 4 : </p>
+				</div>
+
+			</div>
 		
-	</div>	
+			<!-- HSE skills -->
 
-	<!-- Student Satisfaction -->
+			<div id="hseSkills">
+				<h3>HSE Skills</h3>
+				<div id="hse1">
+					<p id="numeroSuperanHSE"></p>
+					<p># de alumnas que superan la meta de puntaje tecnico </p>
+				</div>
 
-	<div id="SatisfactionBox">
-		<h3> Students Satisfaction</h3>
-		<div id="pps">
-			<p id="porcentajePromedioSatisfaccion"></p>
-			<p>% promedio que cumple o supera las expectativas</p>
+				<div id="hse2">
+					<p id="porcentajeSuperanHSE"></p>
+					<p> Porcentaje de alumnas que superan el puntaje tecnico respecto al total de alumnas </p>
+				</div>
+
+				<div id="hse3">
+					<p id="superanSprintUnoHSE">Sprint 1 : </p>
+					<p id="superanSprintDosHSE">Sprint 2 : </p>
+					<p id="superanSprintTresHSE">Sprint 3 : </p>
+					<p id="superanSprintCuatroHSE">Sprint 4 : </p>
+				</div>
+
+			</div>
+
 		</div>
+	</section>
 
-		<div id="porcentajeSprintBox">
-			<h4>% por sprint</h4>
-			
+
+	<!-- students -->
+	<section>
+		<div id="container">
+			<div id="photo"></div>
+			<div id="name"></div>
+			<div id="techPoints"></div>
+			<div id="lifePoints"></div>
 		</div>
+	</section>
 
-	</div>
-
-	<!-- Teacher Ratings --> 
-
-	<div id="teacherBox">
-		<h3>Teacher Rating</h3>
-		<div>
-			<p id="notaProfe"></p>
-			<p>promedio notas profesores</p>
-		</div>
-	</div>
-
-	<!--JediMaster Rating --> 
-
-	<div id="jediBox">
-		<h3>JediMaster Rating</h3>
-		<div>
-			<p id="notaJedi"></p>
-			<p>promedio notas jedimaster</p>
-		</div>
-	</div>
-
-	<!--Achievement --> 
-	<div id="achievementBox">
-		<h3> Achievement</h3>
-		<div>
-			<p id="superanMeta"></p>
-			<p> Numero de alumnas activas que superan la meta</p>
-		</div>
-		<div>
-			<p id="metaRespectoTotal"></p>
-			<p>Porcentaje de alumnas que cumplen con la meta, en relacion al total </p>
-		</div>
-	</div>
-
-	<!-- tech skills --> 
-
-	<div id="techSkills">
-		<h3>Tech Skills</h3>
-		<div>
-			<p id="numeroSuperanTecnico"></p>
-			<p># de alumnas que superan la meta de puntaje tecnico</p>
-		</div>
-
-		<div>
-			<p id="porcentajeSuperanTecnico"></p>
-			<p> Porcentaje de alumnas que superan el puntaje tecnico respecto al total de alumnas </p>
-		</div>
-
-		<div>
-			<p id="superanSprintUno">Sprint 1 : </p>
-			<p id="superanSprintDos">Sprint 2 : </p>
-			<p id="superanSprintTres">Sprint 3 : </p>
-			<p id="superanSprintCuatro">Sprint 4 : </p>
-		</div>
-
-	</div>
-
-		<div id="hseSkills">
-		<h3>HSE Skills</h3>
-		<div>
-			<p id="numeroSuperanHSE"></p>
-			<p># de alumnas que superan la meta de puntaje tecnico </p>
-		</div>
-
-		<div>
-			<p id="porcentajeSuperanHSE"></p>
-			<p> Porcentaje de alumnas que superan el puntaje tecnico respecto al total de alumnas </p>
-		</div>
-
-		<div>
-			<p id="superanSprintUnoHSE">Sprint 1 : </p>
-			<p id="superanSprintDosHSE">Sprint 2 : </p>
-			<p id="superanSprintTresHSE">Sprint 3 : </p>
-			<p id="superanSprintCuatroHSE">Sprint 4 : </p>
-		</div>
-
-	</div>
-
-</div>
-</section>
-
-
-<!-- students -->
-<section>
-	<div id="container">
-  		<div id="photo"></div>
-  		<div id="name"></div>
-  		<div id="techPoints"></div>
-  		<div id="lifePoints"></div>
- 	</div>
-</section>
-  
 	
-
-		<script src="https://use.fontawesome.com/53a473cc15.js"></script>
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
-  </body>
+	<!-- Fontawesome iconos -->
+	<script src="https://use.fontawesome.com/53a473cc15.js"></script>
+	<!-- Base de datos -->
+	<script src="./js/data.js"></script>
+	<!-- Aquí va tus archivos JS -->
+	<script src="./js/app.js"></script>
+</body>
 </html>
