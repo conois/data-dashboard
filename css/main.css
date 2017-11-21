@@ -86,9 +86,10 @@ button:hover{
 /*posible opcion de seleccion de paises*/
 #principal{
 	position: relative;
-	left:1030px;
+	left:1010px;
 	bottom: 720px;
-	width: 190px;
+	width: 200px;
+	font-weight: bold;
 	background-color: #F99D24;
 	border-radius: 5px;
 	padding: 10px;

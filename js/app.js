@@ -229,6 +229,22 @@ console.log(data);
 	}var promedioSuperanSprintCuatro=((superanTecnicoSprintCuatro*100)/data.AQP["2016-2"].students.length).toFixed(1); 
 	superanSprintCuatro.innerHTML+= superanTecnicoSprintCuatro +"#  alumnas superaron la meta // " + promedioSuperanSprintCuatro + "% del total"
 
+	// rendimiento hse
+	var numeroSuperanHSE = document.getElementById("numeroSuperanHSE"); 
+	var porcentajeSuperanHSE= document.getElementById("porcentajeSuperanHSE"); 
+
+	var sumaPuntajeHSE=0;
+	var alumnasSuperanHSE=0;
+	for(var r=0; r< data.AQP["2016-2"].students.length; r++){
+		for ( var s=0; s< data.AQP["2016-2"].students[r].sprints.length; s++){
+			sumaPuntajeHSE+= data.AQP["2016-2"].students[r].sprints[s].score.hse; 
+		}promedioPuntajeHSE=sumaPuntajeHSE/data.AQP["2016-2"].students[r].sprints.length;
+		if (promedioPuntajeHSE>=840){
+			alumnasSuperanHSE++;
+		} sumaPuntajeHSE=0;
+	} 
+	numeroSuperanHSE.innerHTML=alumnasSuperanHSE;
+	porcentajeSuperanHSE.innerHTML= ((alumnasSuperanHSE*100)/data.AQP["2016-2"].students.length).toFixed(1) + "%";
 	// rendimiento por sprint HSE 
 
 	var superanSprintUnoHSE=document.getElementById("superanSprintUnoHSE"); 
