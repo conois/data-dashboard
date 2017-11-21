@@ -399,6 +399,15 @@ li, ol{
 	left: 60px;
 }
 
+#graficoTech{
+	padding: 10px;
+}
+
+#graficoTech img{
+	width: 500px;
+	height: auto;
+}
+
 #hseSkills{
 	background-color: #f4f5f7;
 	color: #000; 
@@ -449,6 +458,15 @@ li, ol{
 	width: 500px;
 	text-align: center;
 	left: 60px;
+}
+
+#graficoHse{
+	padding: 10px;
+}
+
+#graficoHse img{
+	width: 500px;
+	height: auto;
 }
 
 

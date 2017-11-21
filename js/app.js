@@ -365,8 +365,7 @@ console.log(data);
 
 
 
+	 
 
 // crenado funcionalidades para teachers 
-
-/*sin informacion disponible */ 
 
