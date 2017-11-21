@@ -329,7 +329,7 @@ console.log(data);
 	 	console.log("puntos por sprint " + [j] + " " + pointSprint)
 		totalPoints+=pointSprint
 		console.log("total puntos " + totalPoints)
-		} percentTechSkills= ((totalPoints*100)/7200).toFixed(3); 
+		} percentTechSkills= ((totalPoints*100)/7200).toFixed(1); 
 		console.log("porcentaje total " +percentTechSkills + " de tech"); 
 	//calculando el %lifeSkills 
 		allPoints=0; 
@@ -338,12 +338,12 @@ console.log(data);
 	 	console.log("puntos por sprint " + [k] + " " + pointSprint)
 		allPoints+=pointSprint
 		console.log("total puntos " + allPoints)
-		} percentLifeSkills= ((allPoints*100)/4800).toFixed(3); 
+		} percentLifeSkills= ((allPoints*100)/4800).toFixed(1); 
 		console.log("porcentaje total " +percentLifeSkills + " de hse "); 
 
 	// asignando puntos a variables 
-	pointTech.innerHTML=percentTechSkills; 
-	pointLife.innerHTML=percentLifeSkills; 
+	pointTech.innerHTML=percentTechSkills + "%"; 
+	pointLife.innerHTML=percentLifeSkills + "%"; 
 
 	//pasando hijos 
 	techBox.appendChild(titleTechBox); 
